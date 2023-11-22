@@ -24,16 +24,42 @@ public class PlayerControls : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * (jumpPower * rb.mass * rb.gravityScale * 20.0f));
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Ground")
+        if (collision.collider.tag == "Ground")
         {
             isGrounded = true;
         }
     }
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground")
+        {
+            isGrounded = true;
+
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground")
+        {
+            isGrounded = false;
+
+        }
+    }
+    void GameOver()
+    {
+        Time.timeScale = 0;
+
+        if (transform.position.x < posX)
+        {
+            GameOver();
+        }
+    }
+    
 }
