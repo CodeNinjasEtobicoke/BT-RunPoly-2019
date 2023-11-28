@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
 {
     [Header("COGO")]
     public GameObject challengeObject;
+    [Header("COGO2")]
+    public GameObject challengeObject2;
     [Header("Dsdt")]
     public float spawnDelay = 1f;
     [Header("Dst")]
@@ -23,6 +25,14 @@ public class Spawner : MonoBehaviour
     }
     void InstantiateObjects()
     {
-        Instantiate(challengeObject, transform.position, transform.rotation);
+        int dice = Random.Range(1, 100);
+        if (dice > 50)
+        {
+            Instantiate(challengeObject, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(challengeObject2, transform.position, transform.rotation);
+        }
     }
 }
