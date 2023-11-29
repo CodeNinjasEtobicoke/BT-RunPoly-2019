@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8529780690750150336}
   - component: {fileID: 8744426059349171870}
   - component: {fileID: 895371126156895732}
+  - component: {fileID: 5997655282555579877}
   m_Layer: 0
   m_Name: ChallangeObj2
   m_TagString: Ground
@@ -101,7 +102,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 1.92, y: 1.92, z: 1.9399999, w: 1.92}
@@ -115,6 +116,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.5, y: 6.5}
   m_EdgeRadius: 0
+--- !u!114 &5997655282555579877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657061004155395780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f73868909b453a44cb25fbf69078eb6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1001 &114735202050553317
 PrefabInstance:
   m_ObjectHideFlags: 0
